@@ -40,7 +40,7 @@ library(tiff)
 
 
 <a href = "https://crumplab.github.io">
-```{r pressure, include=FALSE}
+```{r pressure, echo=FALSE, Warning=FALSE}
 library(tiff)
 grid::grid.raster( tiff::readTIFF( "./images/CatchAcoupaceleste.tiff") )
 ```
