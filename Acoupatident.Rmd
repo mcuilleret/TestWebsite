@@ -1,5 +1,5 @@
 ---
-title: "Acoupa Celeste"
+title: "Acoupa Tident"
 output:
   html_document:
     toc: true
@@ -12,10 +12,10 @@ output:
 
 </div>
 <div class="col-sm-6">
-Acoupa Celeste
+Acoupa Tident
 ```{r pressure, echo=FALSE, Warning=FALSE}
 library(tiff)
-grid::grid.raster( tiff::readTIFF( "./images/CatchAcoupaceleste.tiff") )
+grid::grid.raster( tiff::readTIFF( "./images/CatchAcoupatident.tiff") )
 ```
 </a>
 </div>
