@@ -9,5 +9,5 @@ navbar:
     - text: "Links"
       href: Links.html
     - text: "Espèces"
-      href: Links.html
+      href: espece.html
 output_dir: "docs"

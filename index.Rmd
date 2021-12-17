@@ -32,16 +32,4 @@ This is a template example for lab journaling. Students in Matt Crump's Human Co
 4. Change everything to make it your own.
 
 
-</div>
-<div class="col-sm-6">
 
-### [Crump Lab: Human Cognition and Performance](https://crumplab.github.io)
-
-
-<a href = "https://crumplab.github.io">
-```{r pressure, echo=FALSE, Warning=FALSE}
-library(tiff)
-grid::grid.raster( tiff::readTIFF( "./images/CatchAcoupaceleste.tiff") )
-```
-</a>
-</div>
