@@ -4,12 +4,12 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Journal"
-      href: Journal.html
-    - text: "Links"
-      href: Links.html
     - text: "Espèces"
       href: espece.html
     - text: "Publications"
       href: publications.html
+          - text: "Journal"
+      href: Journal.html
+    - text: "Links"
+      href: Links.html
 output_dir: "docs"
