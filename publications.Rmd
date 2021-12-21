@@ -2,16 +2,20 @@
 title: "Application"
 output:
   html_document:
-    toc: true
-    toc_float: true
-    collapsed: false
-    number_sections: false
-    toc_depth: 1
-    #code_folding: hide
+  theme: flatly
+  runtime: shiny
 ---
 Application:
-```{r appli}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-library(knitr)
-knitr::include_app("https://mcuilleret.shinyapps.io/Applic/")
+
+
+## Test 1: Manual embedding with `iframe` tag
+
+<iframe width="100%" height="150px" src="https://phillyo.shinyapps.io/intelligentsia/" title="Shinyapps.io iframe demo"></iframe>
+
+```{r test}
+knitr::include_app(url = "https://phillyo.shinyapps.io/intelligentsia/", height = "150px")
 ```
