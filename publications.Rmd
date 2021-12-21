@@ -10,6 +10,7 @@ output:
     #code_folding: hide
 ---
 Application:
+
 ```{r appli,echo=FALSE,warning=FALSE}
 library(knitr)
 knitr::include_app("https://mcuilleret.shinyapps.io/Applic/", height = "700px")
