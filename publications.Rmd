@@ -1,6 +1,5 @@
 ---
-title: "Publications"
-runtime: shiny
+title: "Application"
 output:
   html_document:
     toc: true
@@ -10,74 +9,9 @@ output:
     toc_depth: 1
     #code_folding: hide
 ---
-Publications:
+Application:
+```{r appli}
 
-<a href = "https://mcuilleret.github.io/TestWebsite/AcoupaChasseur.html">Article
-
-Working paper:
-
-<a href = "https://mcuilleret.github.io/TestWebsite/AcoupaChasseur.html">Working paper
-
-
-```{r, echo=FALSE}
-library(shiny)
-
-# Define UI for app that draws a histogram ----
-ui <- fluidPage(
-  
-  # App title ----
-  titlePanel("Resilience!"),
-  
-  # Sidebar layout with input and output definitions ----
-  sidebarLayout(
-    # Sidebar panel for inputs ----
-    sidebarPanel(
-      
-      # Input: Slider for the number of bins ----
-      sliderInput("bins",
-                  label = "Number of bins:",
-                  min = 2018,
-                  max = 2040,
-                  value=2019)
-      
-    ),
-    
-    # Main panel for displaying outputs ----
-    mainPanel(
-      
-      # Output: Histogram ----
-      plotOutput(outputId = "distPlot")
-      
-    )
-  )
-)
-
-server <- function(input, output) {
-  library(ggplot2)
-  library(forecast)
-  library(tseries)
-  # Histogram of the Old Faithful Geyser Data ----
-  # with requested number of bins
-  # This expression that generates a histogram is wrapped in a call
-  # to renderPlot to indicate that:
-  #
-  # 1. It is "reactive" and therefore should be automatically
-  #    re-executed when inputs (input$bins) change
-  # 2. Its output type is a plot
-  
-  
-  output$distPlot <- renderPlot({
-    
-     #x    <- faithful$waiting
-    #bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    MatTimeOfCrisis_blim_Climate_ts<-read.csv("./images/forecast.csv")
-    MatTimeOfCrisis_blim_Climate_ts<-ts(MatTimeOfCrisis_blim_Climate_ts,start=c(2018,1), frequency=4)
-        autoplot(MatTimeOfCrisis_blim_Climate_ts)+ theme(legend.position = "none")+
-      ggtitle("Ecological recovery")+ scale_y_continuous(name ="Recoveryk",limits=c(0, 1))+
-      scale_x_continuous(name ="Year", limits = c(2018,input$bins)) 
-
-  })
-  
-}
-shinyApp(ui = ui, server = server)
+library(knitr)
+knitr::include_app("https://mcuilleret.shinyapps.io/Applic/")
 ```
